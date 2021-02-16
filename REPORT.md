@@ -47,18 +47,18 @@ Furthermore, if we'd decide to expand the project to become a collaborative spre
 2. Source the `activate` script: `source interview_venv/bin/activate`
 3. Install the dependencies in your virtualenv: `pip install -r requirements.txt`
 4. Create db: `flask db upgrade`
-4. Install node modules dependencies: `yarn --cwd spreadsheet/client`
+4. Install node modules dependencies: `yarn --cwd app/client`
 
 ### Run ###
 
 #### Dev mode ####
-1. Build FE in watch mode: `yarn --cwd spreadsheet/client dev`
+1. Build FE in watch mode: `yarn --cwd app/client dev`
 2. Run the server: `FLASK_ENV=development FLASK_APP=spreadsheet flask run -p 8000`
 
 *Note this will use long polling instead of websocket*
 
 #### Prod mode ####
-1. Build FE: `yarn --cwd spreadsheet/client build`
+1. Build FE: `yarn --cwd app/client build`
 2. Run the server: `gunicorn "spreadsheet:create_app()"`
 
 
