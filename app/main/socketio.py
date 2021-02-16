@@ -6,7 +6,8 @@ from app import socketio
 @socketio.on('connect')
 def on_connect():
     print("connected")
-    emit("setvalues", Cell.list_last_values())
+    values = Cell.list_last_values()
+    emit("setvalues", values)
 
 
 @socketio.on('disconnect')
