@@ -1,6 +1,6 @@
 from flask import render_template
-from app import app
+from app.main import bp
 
-@app.route('/')
+@bp.route('/')
 def base():
     return render_template('index.html')
